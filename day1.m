@@ -1,6 +1,5 @@
-day1(filename)
-	new lines,x,dir,amt,pos
-	d ^readlines(filename,.lines)
+day1(lines)
+	new x,dir,amt,pos
 	new zeroCount
 	set zeroCount=0
 	set x=""
@@ -15,9 +14,8 @@ day1(filename)
 	write "Day1:  ",zeroCount,!
 	quit
 	;
-part2(filename)
-	new lines,x,dir,amt,pos,oldpos
-	d ^readlines(filename,.lines)
+part2(lines)
+	new x,dir,amt,pos,oldpos
 	new zeroCount
 	set zeroCount=0
 	set x=""
