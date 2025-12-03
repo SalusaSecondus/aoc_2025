@@ -1,20 +1,16 @@
-day3(lines,cnt)
-	n sum,idx,start,first,second,len
-	s sum=0,idx=""
-	f  s idx=$order(lines(idx)) q:idx=""  do
-	. s sum=sum+$$joltage(lines(idx),$get(cnt,2))
-	write "Day 3:  ",sum,!
+day3(d,c)
+	n r,i,s,a,b,l
+	s r=0,i=""
+	f  s i=$o(d(i)) q:i=""  s r=r+$$j(d(i),$g(c,2))
+	w "Day 3:  ",r,!
 	q
-joltage(bank,cnt)
-	n idx,res,start,tmp,len
-	s res="",start=0,len=$length(bank)
-	for idx=cnt:-1:1 do
-	. s tmp=$$rangeMax(bank,start+1,len+1-idx)
-	. s res=res_$e(tmp),start=$e(tmp,2,len)
-	w:^debug bank,"=>",res,!
-	q res
-rangeMax(bank,start,end)
-	n res,resI,idx,tmp
-	s res=0,resI=0
-	for idx=start:1:end s tmp=$e(bank,idx) i tmp>res s res=tmp,resI=idx
-	quit res_resI
+j(b,c)
+	n i,r,s,t,l
+	s r="",s=0,l=$l(b)
+	for i=c:-1:1 s t=$$m(b,s+1,l+1-i),r=r_$e(t),s=$e(t,2,l)
+	q r
+m(b,s,end)
+	n r,x,i,t
+	s r=0
+	for i=s:1:end s t=$e(b,i) s:t>r r=t,x=i
+	quit r_x
