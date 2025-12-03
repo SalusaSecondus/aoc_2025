@@ -7,10 +7,10 @@ day3(d,c)
 j(b,c)
 	n i,r,s,t,l
 	s r="",s=0,l=$l(b)
-	for i=c:-1:1 s t=$$m(b,s+1,l+1-i),r=r_$e(t),s=$e(t,2,l)
+	f i=c:-1:1 s t=$$m(b,s+1,l+1-i),r=r_$e(t),s=$e(t,2,l)
 	q r
-m(b,s,end)
+m(b,s,e)
 	n r,x,i,t
 	s r=0
-	for i=s:1:end s t=$e(b,i) s:t>r r=t,x=i
-	quit r_x
+	f i=s:1:e s t=$e(b,i) s:t>r r=t,x=i
+	q r_x
