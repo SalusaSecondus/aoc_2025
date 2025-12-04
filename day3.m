@@ -14,3 +14,6 @@ m(b,s,e)
 	s r=0
 	f i=s:1:e s t=$e(b,i) s:t>r r=t,x=i
 	q r_x
+part2(data)
+	d day3(.data,12)
+	q
