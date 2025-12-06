@@ -20,7 +20,6 @@ parse(lines,ranges,ingredients)
 	d merge(.tmp,.ranges)
 	q
 inRange(ranges,val)
-	n result,idx s result=0
 	q:$g(ranges(val),0) 1
 	q $g(ranges($o(ranges(val),-1)),0)>=val	
 merge(ranges,output)
