@@ -29,12 +29,14 @@ part2(lines)
 	w "Day 6.2:  ",sum,!
 	q
 parse(lines,nums,ops)
-	n lIdx,cIdx,f,pIdx,tmp s lIdx="",f=0,cIdx=0
+	n lIdx,cIdx,f,pIdx,tmp,p s lIdx="",f=0,cIdx=0
 	kill nums,ops
-	f  s lIdx=$o(lines(lIdx)) q:lIdx=""  s cIdx=0 for pIdx=1:1:$l(lines(lIdx)," ") d
-	. s tmp=$p(lines(lIdx)," ",pIdx) q:tmp=""
-	. s cIdx=cIdx+1
-	. i tmp>0 s nums(cIdx,lIdx)=tmp
+	f  s lIdx=$o(lines(lIdx)) q:lIdx=""  s cIdx=0,p=" " for pIdx=1:1:$l(lines(lIdx)) d
+	. s tmp=$e(lines(lIdx),pIdx)
+	. s:(tmp'=" ")&(p=" ") cIdx=cIdx+1
+	. s p=tmp
+	. q:tmp=" "
+	. i tmp>0 s nums(cIdx,lIdx)=$g(nums(cIdx,lIdx),"")_tmp
 	. e  s ops(cIdx)=tmp
 	q
 parse2(lines,nums,ops)
