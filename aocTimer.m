@@ -6,5 +6,5 @@ aocTimer(action,name)
 	do
 	. i seconds'<1 s disp=$fn(seconds,",",3)_" s" q
 	. s disp=$fn(seconds*1000,",",3)_" ms"
-	w name,": ",disp,!
+	w $$^font(name,"BRIGHT_MAGENTA"),": ",disp,!
 	q
