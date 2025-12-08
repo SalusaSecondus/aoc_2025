@@ -1,4 +1,4 @@
-day1(lines)
+day1(lines,smoke)
 	new x,dir,amt,pos
 	new zeroCount
 	set zeroCount=0
@@ -14,7 +14,7 @@ day1(lines)
 	write "Day1:  ",zeroCount,!
 	quit
 	;
-part2(lines)
+part2(lines,smoke)
 	new x,dir,amt,pos,oldpos
 	new zeroCount
 	set zeroCount=0

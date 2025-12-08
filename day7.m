@@ -1,4 +1,4 @@
-day7(lines)
+day7(lines,smoke)
 	n grid,source,splits,prev,curr,max,row s splits=0,max=$o(lines(""),-1)
 	d parse(.lines,.grid,.source)
 	s prev(source)=1

@@ -1,10 +1,10 @@
-day5(lines)
+day5(lines,smoke)
 	n ranges,ingredients,cnt,idx s cnt=0,idx=""
 	d parse(.lines,.ranges,.ingredients)
 	for  s idx=$o(ingredients(idx)) q:idx=""  s cnt=cnt+$$inRange(.ranges,ingredients(idx))
 	w "Day 5.1: ",cnt,!
 	q
-part2(lines)
+part2(lines,smoke)
 	n ranges,ingredients,cnt,idx s cnt=0,idx=""
 	d parse(.lines,.ranges,.ingredients)
 	f  s idx=$o(ranges(idx))  q:idx=""  s cnt=cnt+ranges(idx)+1-idx

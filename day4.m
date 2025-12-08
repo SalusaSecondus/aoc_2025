@@ -1,4 +1,4 @@
-day4(lines)
+day4(lines,smoke)
 	new data,idx,count,x,y,tmp,xoff,yoff
 	d parse(.lines,.data)
 	set idx="data",count=0
@@ -10,7 +10,7 @@ day4(lines)
 	. w:(^debug)&(tmp<4) idx,"=",@idx,"->",tmp,!
 	write "Day4: ",count,!
 	quit
-part2(lines)
+part2(lines,smoke)
 	new data,idx,count,x,y,tmp,xoff,yoff,diff
 	d parse(.lines,.data)
 	set diff=1,count=0

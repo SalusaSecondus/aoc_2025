@@ -1,4 +1,4 @@
-day6(lines)
+day6(lines,smoke)
 	n nums,ops,col,op,sum,acc,row s col="",sum=0
 	d ^aocTimer("START","Parse")
 	d parse(.lines,.nums,.ops)
@@ -13,7 +13,7 @@ day6(lines)
 	d ^aocTimer("END","Math")
 	w "Day 6.1:  ",sum,!
 	q
-part2(lines)
+part2(lines,smoke)
 	n nums,ops,col,op,sum,acc,row s col="",sum=0
 	d ^aocTimer("START","Parse")
 	d parse2(.lines,.nums,.ops)

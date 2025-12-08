@@ -1,4 +1,4 @@
-day2(lines)
+day2(lines,smoke)
 	new ranges,validCount,r,idx
 	; write "foo",!
 	d splitRanges(lines(0),.ranges)
@@ -17,7 +17,7 @@ splitRanges(line,result)
 	for idx=1:1:$length(line,",") set result(idx,0)=$piece($piece(line,",",idx),"-",1),result(idx,1)=$piece($piece(line,",",idx),"-",2)
 	quit
 	;
-part2(lines)
+part2(lines,smoke)
 	new ranges,validCount,r,idx
 	; write "foo",!
 	d splitRanges(lines(0),.ranges)
