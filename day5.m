@@ -16,7 +16,7 @@ parse(lines,ranges,ingredients)
 	f  s idx=$o(lines(idx)) q:lines(idx)=""  do
 	. s min=$p(lines(idx),"-",1),max=$p(lines(idx),"-",2)
 	. s tmp(min)=$$^max($g(tmp(min),0),max)
-	f  s idx=$o(lines(idx)) q:idx=""  d ^push(.ingredients,lines(idx))
+	f  s idx=$o(lines(idx)) q:idx=""  d push^queue(.ingredients,lines(idx))
 	d merge(.tmp,.ranges)
 	q
 inRange(ranges,val)
